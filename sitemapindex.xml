@@ -6,19 +6,15 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>http://dasutt.github.io/categories/misc.xml</loc>
-  <lastmod>2016-05-09T21:56:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>http://dasutt.github.io/galleries/rss.xml</loc>
   <lastmod>2016-05-11T21:30:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://dasutt.github.io/rss.xml</loc>
-  <lastmod>2016-05-11T21:08:00Z</lastmod>
+  <lastmod>2016-05-20T13:32:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://dasutt.github.io/sitemap.xml</loc>
-  <lastmod>2016-05-11T21:30:00Z</lastmod>
+  <lastmod>2016-05-20T13:32:00Z</lastmod>
  </sitemap>
 </sitemapindex>

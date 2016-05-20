@@ -1,5 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daniel Suttor</title><link>http://dasutt.github.io/</link><description>This is the personal website of Daniel Suttor.</description><atom:link rel="self" type="application/rss+xml" href="http://dasutt.github.io/rss.xml"></atom:link><language>en</language><lastBuildDate>Wed, 11 May 2016 21:08:51 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Welcome</title><link>http://dasutt.github.io/posts/welcome/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I decided to start blogging about some of the projects that I am currently working
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Daniel Suttor</title><link>http://dasutt.github.io/</link><description>This is the personal website of Daniel Suttor.</description><atom:link rel="self" href="http://dasutt.github.io/rss.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 20 May 2016 18:18:25 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Into Darkness Postmortem</title><link>http://dasutt.github.io/posts/into-darkness-postmortem/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Into Darkness is a top down isometric shooter game I developed with four other
+students in a practical course during one semester at TUM. We decided to write
+the whole game from scratch using C++ and DirectX. This proved to be quite a different
+experience than other projects I did before. I will add more information on the
+project page in the next time. In this post I want to give an overview of my experiences
+during this project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-positive"&gt;
+&lt;h2&gt;The Positive&lt;/h2&gt;
+&lt;p&gt;I really liked the setting of our game. Our vision was to create a game where the
+player would explore abandoned underground places and try to gather needed resources.
+The idea was to increase the danger in form of aliens attacking the player while going
+deeper underground. In the same way the player would find more resources in lower levels.
+We wanted that light would play an important role both as an atmospheric element
+and as a game mechanic to be used against the underground dwelling aliens. Overall
+I think that could have created a quite interesting game experience.&lt;/p&gt;
+&lt;p&gt;The best thing of the whole project was to develop the whole game from scratch.
+While it was a lot of work it was also a great experience and a lot of fun to
+see the game grow continually from nothing. For it was far more rewarding to get a
+feature running properly than just using a pre made game engine like Unity.
+Even though the progress is obviously a lot slower compared to using an engine you
+can really understand what is running under the hood of the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-challenges"&gt;
+&lt;h2&gt;The Challenges&lt;/h2&gt;
+&lt;div class="section" id="concept-phase"&gt;
+&lt;h3&gt;Concept Phase&lt;/h3&gt;
+&lt;p&gt;While the initial concept definitely was interesting we made the mistake to not
+concentrate on one specific feature but had a really broad set of features we wanted
+to create. This especially proved a problem later in the development because we
+had to divide our time between them instead of focusing on one at a time.
+The general design was too ambitious to be achieved in the time we had.&lt;/p&gt;
+&lt;p&gt;During the course we had to create a physical prototype before starting with the
+development. While I can understand why one could use this to test an initial prototype
+it is not usable during later development in my opinion. The game play can not
+really transferred to the paper prototype. It would have been more useful to use an engine
+to create small game play prototype during the development.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="programming"&gt;
+&lt;h3&gt;Programming&lt;/h3&gt;
+&lt;p&gt;Because of our design we started from the start to create systems specially for this,
+making assumptions how we could improve the implementations early on. This was a
+mistake which became apparent later in development when the requirements changed.
+We had to change systems completely which would not have been such a problem if
+we had started with a more flexible, general approach.&lt;/p&gt;
+&lt;p&gt;Something we did not do during development was code review leading to quite interesting
+commits from team members. Sometimes the game would not work almost at all
+after changes made and we had to get back to previous commits.&lt;/p&gt;
+&lt;p&gt;One problem during the development was definitely the lack of experience. Especially
+the interaction between the different game components was quite hard. I would have
+preferred to have someone with industry experience to provide some guidance during the
+project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="art"&gt;
+&lt;h3&gt;Art&lt;/h3&gt;
+&lt;p&gt;A problem we had with most of our student game projects was the lack of artists.
+If only programmers are on your team it will definitely show in the resulting assets.
+For the project I did most of the modeling and texturing myself. Looking back at
+the results which are more like placeholders than real art I think the realistic
+art style was not the right decision. Some more abstract rendering would have helped
+to make the game look more finished in my opinion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="team-management"&gt;
+&lt;h3&gt;Team management&lt;/h3&gt;
+&lt;p&gt;Because most of the initial design was my idea and I also had done some of the basic
+engine programming already I was really interested in getting stuff done for the game.
+Due to this I tried to do as much as possible myself leading to a bad task
+distribution overall.&lt;/p&gt;
+&lt;p&gt;Task distribution in general proved to be quite some problem. There was a
+difference in experience between the different team members which made it harder
+to get important features done on time and with the correct quality. Communication
+is really important to find out if a given task can be solved by the assigned
+team member. We also had a new team member joining us almost at the end of the project.
+Without much documentation it was quite hard for him to join the development.&lt;/p&gt;
+&lt;p&gt;Another aspect of team management which did not always work was team motivation.
+As with most other university projects some people see it more as an easy way
+to get credits instead of working on the game. Fortunately, most of us were motivated
+in the beginning. However, with the increasing complexity and more and more time constraints
+in the end, this became a problem. To prevent this communication again is really
+helpful. Not addressing problems like this right away can damage the relationship
+between the team members really fast.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;By only looking of the final game I would say the project was not really successful.
+This has different reasons: First the presentation of the final game is not polished
+enough. The graphic and art style still look more like placeholders and most of the
+menu and HUD are also placeholders. Second, the actual gameplay is not really fun
+and has no really motivation for the player.&lt;/p&gt;
+&lt;p&gt;However, the overall project was a great learning experience for me. The challenges
+I had to face would not have been present like this if we had created the
+game using an existing game engine. Some of the things I would do differently next time
+are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;focus the design on one game element and test it&lt;/li&gt;
+&lt;li&gt;use an engine for prototyping&lt;/li&gt;
+&lt;li&gt;check if your game is actually fun to play&lt;/li&gt;
+&lt;li&gt;let others test your game&lt;/li&gt;
+&lt;li&gt;don't focus to early on optimizations&lt;/li&gt;
+&lt;li&gt;Instead implement more flexible, general systems&lt;/li&gt;
+&lt;li&gt;more communication between team members&lt;/li&gt;
+&lt;li&gt;improve task distribution and don't try to do everything yourself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/into-darkness-postmortem/</guid><pubDate>Fri, 20 May 2016 13:23:46 GMT</pubDate></item><item><title>Welcome</title><link>http://dasutt.github.io/posts/welcome/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I decided to start blogging about some of the projects that I am currently working
 on and have been working on in the last years.&lt;/p&gt;
 &lt;p&gt;I will be focusing mostly on real time rendering and virtual reality and game
 development. Currently I am planning to remove the dust from some of my projects
