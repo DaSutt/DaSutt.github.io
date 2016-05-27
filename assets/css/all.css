@@ -654,3 +654,8 @@ article.post-micro {
 .container {
   max-width: 720px;
 }
+
+img {
+  display: block;
+  margin: 0 auto;
+}

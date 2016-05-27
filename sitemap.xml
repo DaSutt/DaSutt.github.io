@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://dasutt.github.io/</loc>
-  <lastmod>2016-05-11T22:16:00Z</lastmod>
+  <lastmod>2016-05-27T09:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/2016/</loc>
@@ -38,11 +38,47 @@
   <lastmod>2016-05-11T22:16:00Z</lastmod>
  </url>
  <url>
+  <loc>http://dasutt.github.io/stories/blob/</loc>
+  <lastmod>2016-05-27T13:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/celestial/</loc>
+  <lastmod>2016-05-27T13:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/flappy-owl/</loc>
+  <lastmod>2016-05-27T13:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/ice-base/</loc>
+  <lastmod>2016-05-27T13:44:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://dasutt.github.io/stories/impressum/</loc>
   <lastmod>2016-05-11T22:16:00Z</lastmod>
  </url>
  <url>
+  <loc>http://dasutt.github.io/stories/interactive-visual-data-analysis/</loc>
+  <lastmod>2016-05-27T09:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/interactive-visualization/</loc>
+  <lastmod>2016-05-27T08:35:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/into-darkness/</loc>
+  <lastmod>2016-05-27T08:35:00Z</lastmod>
+ </url>
+ <url>
   <loc>http://dasutt.github.io/stories/projects/</loc>
   <lastmod>2016-05-11T22:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/sandbox/</loc>
+  <lastmod>2016-05-27T13:44:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/vr-exploration/</loc>
+  <lastmod>2016-05-27T09:05:00Z</lastmod>
  </url>
 </urlset>
