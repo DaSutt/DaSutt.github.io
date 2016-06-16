@@ -13,9 +13,12 @@
 <meta property="og:site_name" content="Daniel Suttor">
 <meta property="og:title" content="Sandbox">
 <meta property="og:url" content="http://dasutt.github.io/stories/sandbox/">
-<meta property="og:description" content="Write your page here.">
+<meta property="og:description" content='Overview
+I worked on this while reading "Introduction to 3D Game Programming with DirectX 11".
+While the book is really well written and describes the DirectX API in detail the
+example code provided i'>
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-05-27T15:27:17+02:00">
+<meta property="article:published_time" content="2016-06-16T15:27:17+02:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -54,13 +57,7 @@
                 
             </li>
 </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-    <a href="index.rst" id="sourcelink">Source</a>
-    </li>
-
-                
-            </ul>
+<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!-- /.navbar-collapse -->
     </div>
@@ -76,7 +73,79 @@
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>Write your page here.</p>
+    <div>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>I worked on this while reading "Introduction to 3D Game Programming with DirectX 11".
+While the book is really well written and describes the DirectX API in detail the
+example code provided is only useful for very small examples. Because of this my
+goal was to build my own application and add the effects described in the book.</p>
+<div class="section" id="effects">
+<h3>Effects</h3>
+<p>Some of the effects I implemented were:</p>
+<ul class="simple">
+<li>Phong shading</li>
+<li>Texturing with diffuse and transparent textures</li>
+<li>Billboards</li>
+<li>Hardware instancing</li>
+<li>Image Blurring</li>
+<li>Tesselation of geometry</li>
+<li>Frustum culling with OBB</li>
+<li>Picking of meshes</li>
+<li>Environment mapping</li>
+<li>Normal and Displacement mapping</li>
+<li>Terrain tesselation</li>
+<li>Particle systems</li>
+<li>Shadow maps</li>
+</ul>
+<img alt="/images/sandbox/background.png" src="../../images/sandbox/background.png">
+</div>
+</div>
+<div class="section" id="challenges">
+<h2>Challenges</h2>
+<div class="section" id="starting-off">
+<h3>Starting off</h3>
+<p>Something I struggled with at the beginning was how to approach the implementation.
+At first I started with reading the chapter on one subject and then implementing it
+as described in the book. Sometimes that would not really work resulting in an
+image clearly wrong but I was not sure where the problem was. Without experience
+it can be really hard to debug such problems.</p>
+<p>After finishing the project I established a different routine when implementing something new.
+I start with the minimal working solution which creates a result on screen. After this
+I add more and more features and check if the output is ok. If something is not working
+correctly I use tools to verify the implementation.</p>
+</div>
+<div class="section" id="tools">
+<h3>Tools</h3>
+<p>For Debugging I found both the Visual Studio Graphics Debugger as well as RenderDoc
+really helpful. In general I prefer RenderDoc for several reasons:</p>
+<ul class="simple">
+<li>The overview of a frame is divided in passes e.g. depth-only or color pass</li>
+<li>pipeline state highlighting when something is missing</li>
+<li>buffer content format combinations possible</li>
+<li>overall better layout e.g. inspecting constant buffers while the pipeline state is still shown</li>
+</ul>
+</div>
+<div class="section" id="managing-effects">
+<h3>Managing effects</h3>
+<p>One thing I really missed in the book were ideas how to manage all the different effects.
+Most of the examples are for one particular effect and the overall framework is designed
+with this kind of applications in mind. While this is obviously good to highlight
+only the relevant features bringing all together is a completely different story.</p>
+</div>
+<div class="section" id="putting-everything-together">
+<h3>Putting everything together</h3>
+<p>The major problem which became apparent during the development was that I was missing
+a good structure to organize the drawing of the objects in scene with different effects.
+This made it increasingly complicated to add new shader effects as well as add the
+information needed to the objects and the drawing of a scene.</p>
+<p>Most of this has to be rewritten to be made more scalable. Ideally the meshes would
+be sorted based on the needed effects and then after setting the effect the appropriate
+meshes are rendered. At the moment too much is still hard coded making the system not
+flexible enough.</p>
+</div>
+</div>
+</div>
     </div>
     
 

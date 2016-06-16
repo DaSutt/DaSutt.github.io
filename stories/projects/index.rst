@@ -30,7 +30,7 @@ An isometric third person shooter we developed during a semester at university
 with C++ and DirectX from scratch. My summary of the development can be read
 in `this <link://slug/into-darkness-postmortem>`__ blog post.
 
-Sandbox
+`Sandbox <link://slug/sandbox>`__
 -----------------------------------------------
 
 A small framework to test out different graphic effects implemented with C++ and
