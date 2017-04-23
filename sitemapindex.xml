@@ -6,11 +6,39 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://dasutt.github.io/categories/blender.xml</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://dasutt.github.io/categories/c%2B%2B.xml</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://dasutt.github.io/categories/directx-11.xml</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://dasutt.github.io/categories/directx.xml</loc>
+  <lastmod>2017-04-23T11:42:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://dasutt.github.io/categories/leap-motion.xml</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://dasutt.github.io/categories/oculus-rift.xml</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://dasutt.github.io/categories/unreal-engine.xml</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://dasutt.github.io/rss.xml</loc>
-  <lastmod>2017-04-15T21:48:00Z</lastmod>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://dasutt.github.io/sitemap.xml</loc>
-  <lastmod>2017-04-15T21:48:00Z</lastmod>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
  </sitemap>
 </sitemapindex>

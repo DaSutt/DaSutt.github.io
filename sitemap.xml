@@ -23,7 +23,35 @@
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/blender/</loc>
+  <lastmod>2017-04-23T11:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/c%2B%2B/</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/directx-11/</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/directx/</loc>
+  <lastmod>2017-04-23T11:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/leap-motion/</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/oculus-rift/</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/unreal-engine/</loc>
+  <lastmod>2017-04-23T11:55:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/blender-and-directx-projects/</loc>
@@ -84,6 +112,10 @@
  <url>
   <loc>http://dasutt.github.io/stories/into-darkness/</loc>
   <lastmod>2017-04-15T13:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/open-capture-and-analytics-tool/</loc>
+  <lastmod>2017-04-23T11:24:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/projects/</loc>

@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daniel Suttor</title><link>http://dasutt.github.io/</link><description>This is the personal website of Daniel Suttor.</description><atom:link href="http://dasutt.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 23 Apr 2017 11:55:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ifc to Unreal</title><link>http://dasutt.github.io/posts/ifc-to-unreal-post/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;p&gt;I wrote an article about a project to import architectural Ifc data into Unreal Engine.
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daniel Suttor (Posts about Blender)</title><link>http://dasutt.github.io/</link><description></description><atom:link href="http://dasutt.github.io/categories/blender.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 23 Apr 2017 11:55:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Ifc to Unreal</title><link>http://dasutt.github.io/posts/ifc-to-unreal-post/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;p&gt;I wrote an article about a project to import architectural Ifc data into Unreal Engine.
 We managed to import the complete mathematics - informatics building of our university.
 More information about the import process and the different issues we faced can be found
 &lt;a class="reference external" href="http://dasutt.github.io/stories/ifc-to-unreal"&gt;here&lt;/a&gt; .&lt;/p&gt;</description><category>Blender</category><category>C++</category><category>Unreal Engine</category><guid>http://dasutt.github.io/posts/ifc-to-unreal-post/</guid><pubDate>Sat, 15 Apr 2017 21:44:25 GMT</pubDate></item><item><title>Blender and DirectX projects</title><link>http://dasutt.github.io/posts/blender-and-directx-projects/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added two more projects I did some time ago:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;strong&gt;Sandbox:&lt;/strong&gt; C++/DirectX application to test out different graphic effects&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ice base:&lt;/strong&gt; A 3D model I created from scratch&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>Blender</category><category>C++</category><category>DirectX 11</category><guid>http://dasutt.github.io/posts/blender-and-directx-projects/</guid><pubDate>Thu, 16 Jun 2016 14:46:15 GMT</pubDate></item><item><title>First project pages</title><link>http://dasutt.github.io/posts/first-project-pages/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added some of my projects to the project page:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;strong&gt;Interactive Visual Data Analysis:&lt;/strong&gt; C++/DirectX tool for rendering of scientific volume data sets.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VR Exploration:&lt;/strong&gt; The results of my bachelor's thesis. A framework for Oculus Rift and Leap Motion for VR movement of data sets.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Into Darkness:&lt;/strong&gt; Detailed information on what I worked on during the Into Darkness project.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I also added some information on other projects. However for those I have not
-yet wrote a complete article. More will come later.&lt;/p&gt;&lt;/div&gt;</description><category>C++</category><category>DirectX 11</category><category>Leap Motion</category><category>Oculus Rift</category><guid>http://dasutt.github.io/posts/first-project-pages/</guid><pubDate>Fri, 27 May 2016 13:56:12 GMT</pubDate></item><item><title>Into Darkness Postmortem</title><link>http://dasutt.github.io/posts/into-darkness-postmortem/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduction"&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>Blender</category><category>C++</category><category>DirectX 11</category><guid>http://dasutt.github.io/posts/blender-and-directx-projects/</guid><pubDate>Thu, 16 Jun 2016 14:46:15 GMT</pubDate></item><item><title>Into Darkness Postmortem</title><link>http://dasutt.github.io/posts/into-darkness-postmortem/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduction"&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Into Darkness is a top down isometric shooter game I developed with four other
 students in a practical course during one semester at TUM. We decided to write
@@ -119,8 +112,4 @@ are:&lt;/p&gt;
 &lt;li&gt;more communication between team members&lt;/li&gt;
 &lt;li&gt;improve task distribution and don't try to do everything yourself&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>Blender</category><category>C++</category><category>DirectX 11</category><guid>http://dasutt.github.io/posts/into-darkness-postmortem/</guid><pubDate>Fri, 20 May 2016 13:23:46 GMT</pubDate></item><item><title>Welcome</title><link>http://dasutt.github.io/posts/welcome/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I decided to start blogging about some of the projects that I am currently working
-on and have been working on in the last years.&lt;/p&gt;
-&lt;p&gt;I will be focusing mostly on real time rendering and virtual reality and game
-development. Currently I am planning to remove the dust from some of my projects
-and making them presentable.&lt;/p&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/welcome/</guid><pubDate>Wed, 11 May 2016 20:21:10 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>Blender</category><category>C++</category><category>DirectX 11</category><guid>http://dasutt.github.io/posts/into-darkness-postmortem/</guid><pubDate>Fri, 20 May 2016 13:23:46 GMT</pubDate></item></channel></rss>
