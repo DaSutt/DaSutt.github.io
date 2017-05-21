@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>http://dasutt.github.io/archive.html</loc>
-  <lastmod>2017-04-15T21:47:00Z</lastmod>
+  <lastmod>2017-05-21T10:09:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/</loc>
@@ -72,6 +72,10 @@
  <url>
   <loc>http://dasutt.github.io/posts/into-darkness-postmortem/</loc>
   <lastmod>2017-04-15T13:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/posts/more-screenshots/</loc>
+  <lastmod>2017-05-21T10:09:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/welcome/</loc>
@@ -128,6 +132,10 @@
  <url>
   <loc>http://dasutt.github.io/stories/tiled-forward-plus-rendering/</loc>
   <lastmod>2017-04-15T13:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/stories/volumetric-rendering/</loc>
+  <lastmod>2017-05-21T10:06:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/vr-exploration/</loc>
