@@ -13,12 +13,10 @@
 <meta property="og:site_name" content="Daniel Suttor">
 <meta property="og:title" content="Volumetric Rendering">
 <meta property="og:url" content="http://dasutt.github.io/stories/volumetric-rendering/">
-<meta property="og:description" content="More information coming after I finished the thesis. For now just some screenshot of what is to come:
-Full scene with different frequencies like global fog, height fog and small fog particles:
-
-
-
-Comp">
+<meta property="og:description" content="Overview
+Over the course of the last six months I have been working on my master's thesis
+to finish my M.Sc. in computer science at the Technical University Munich. The thesis
+was about creating a uni">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-05-21T11:59:59+02:00">
 </head>
@@ -76,12 +74,135 @@ Comp">
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>More information coming after I finished the thesis. For now just some screenshot of what is to come:</p>
-<p>Full scene with different frequencies like global fog, height fog and small fog particles:</p>
-<img alt="/images/volumetric-rendering/FullScene.png" src="../../images/volumetric-rendering/FullScene.png"><img alt="/images/volumetric-rendering/FullScene_GodRays.png" src="../../images/volumetric-rendering/FullScene_GodRays.png"><img alt="/images/volumetric-rendering/FullScene_GroundFog.png" src="../../images/volumetric-rendering/FullScene_GroundFog.png"><p>Comparison between the results from my engine and a rendering with PBRT with single scattering. On
-the left my engine and on the right PBRT:</p>
-<img alt="/images/volumetric-rendering/GroundFog_Comparison.png" src="../../images/volumetric-rendering/GroundFog_Comparison.png"><p>Visualization of the different grid levels and frequencies:</p>
-<img alt="/images/volumetric-rendering/LevelVisualization.png" src="../../images/volumetric-rendering/LevelVisualization.png"><img alt="/images/volumetric-rendering/MaxFrequency.png" src="../../images/volumetric-rendering/MaxFrequency.png">
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>Over the course of the last six months I have been working on my master's thesis
+to finish my M.Sc. in computer science at the Technical University Munich. The thesis
+was about creating a unified particle rendering pipeline for games using volumetric rendering.
+My supervisor was Prof. Dr. Rüdiger Westermann from the computer graphics chair at TUM.
+In addition I had the opportunity to have Dr. Matthäus Chajdas from AMD and Dr. Sébastien Hillaire
+from Frostbite as my advisors.</p>
+</div>
+<div class="section" id="state-of-the-art">
+<h2>State of the Art</h2>
+<p>Modern games consist of a variety of different particle effects. These can include
+large scale analytic fog, medium scale light shaft effects or small scale 2D billboards.
+All these effects have to be implemented separately and combined together in the
+final image. To decrease this problem volumetric rendering with raymarching is
+started to be used in most major engines. The current state of the art approach which Sébastien
+has created can be already used for great visuals.</p>
+<p>You can find more information on it in <a class="reference external" href="href=%22https:/www.ea.com/frostbite/news/physically-based-unified-volumetric-rendering-in-frostbite%22">this presentation.</a>
+The great results which can be achieved with this technique can be seen in some of
+the new Frostbite games like <a class="reference external" href="href=%22https:/www.youtube.com/watch?v=EL5GSfs9fi4%22">Anthem.</a></p>
+<p>This approach has several advantages:</p>
+<ul class="simple">
+<li>The view space grid maps directly to the raymarching steps</li>
+<li>Low resolution raymarching can be used thanks to temporal integration</li>
+<li>Low memory footprint of the grid</li>
+<li>Supports large and medium scale effects</li>
+<li>Can be applied easily to opaque and transparent geometry</li>
+</ul>
+<p>However there are also clear disadvantages:</p>
+<ul class="simple">
+<li>The grid has to be filled completely each frame</li>
+<li>Different volumetric volumes at the same position invalidate each other</li>
+<li>Relatively coarse resolution of the grid, reduces support for small particles</li>
+<li>Additionally world space grid is needed for volumetric shadows</li>
+<li>Still has to be combined with other effects like billboards to create the final image.</li>
+</ul>
+</div>
+<div class="section" id="volumetric-frequencies">
+<h2>Volumetric Frequencies</h2>
+<p>From looking at real world volumetric effects it becomes clear, that these effects
+can be divided into multiple frequencies. This can be seen in the following images
+with large scale low frequency data(blue), medium scale medium frequency(green) and
+small scale high frequency(red) data. To correctly recreate these effects it is necessary
+to consider both the different frequencies as well as the distance to the camera.</p>
+<img alt="/images/volumetric-rendering/World_Frequencies.png" src="../../images/volumetric-rendering/World_Frequencies.png"><p>Sources: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Space_Shuttle_Challenger_moving_through_fog.jpg">https://commons.wikimedia.org/wiki/File:Space_Shuttle_Challenger_moving_through_fog.jpg</a> and
+<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Defense.gov_photo_essay_100506-N-6070S-819.jpg">https://commons.wikimedia.org/wiki/File:Defense.gov_photo_essay_100506-N-6070S-819.jpg</a></p>
+<p>To cover these individual frequencies I created an adaptive world space grid in my thesis.
+The subdivision of the adaptive grid can be seen in the following image. Each of the green
+cubes is a node in the grid which stores data inside a 3D texture atlas. The biggest
+difference to previous approaches is, that these frequencies are completely independent
+of each other and that the grid is in world space.</p>
+<img alt="/images/volumetric-rendering/GridLevel.png" src="../../images/volumetric-rendering/GridLevel.png"><p>For the thesis I implemented three different effects:</p>
+<img alt="/images/volumetric-rendering/Engine_LowFrequency.png" src="../../images/volumetric-rendering/Engine_LowFrequency.png"><p>Large scale homogeneous fog on the lowest frequency.</p>
+<img alt="/images/volumetric-rendering/Engine_MediumFrequency.png" src="../../images/volumetric-rendering/Engine_MediumFrequency.png"><p>Medium scale heterogeneous ground fog at the intersection between fog and air.</p>
+<img alt="/images/volumetric-rendering/Engine_HighFrequency.png" src="../../images/volumetric-rendering/Engine_HighFrequency.png"><p>Small scale high frequency particle spheres.</p>
+</div>
+<div class="section" id="grid-traversal">
+<h2>Grid Traversal</h2>
+<p>Similar to other raymarching approaches, an exponential distribution of raymarching steps
+is used. However, because the frequencies are independent of each other it is necessary
+to perform multiple samples for one raymarching steps. During the raymarching, shadowing
+through sampling of the shadow maps as well as the calculation of shadow rays for a
+directional light are performed.
+The results of this can be seen in the following image.</p>
+<img alt="/images/volumetric-rendering/Engine_FullScene.png" src="../../images/volumetric-rendering/Engine_FullScene.png"><p>In addition to this, a level of detail mechanism was implemented. For this, mipmaps
+are created for parent nodes which store the averaged values of the child nodes.
+To improve the transition between mipmaps and child levels they are blended for
+several steps until only the mipmap will be sampled.</p>
+</div>
+<div class="section" id="performance">
+<h2>Performance</h2>
+<p>As can be seen in the following graph the performance is currently not real time
+anymore for the worst case that at each ray position a shadow ray has to be casted.
+However, to put this into perspective the raymarching is currently performed with a
+far higher resolution than other approaches like Frostbite.</p>
+<img alt="/images/volumetric-rendering/Performance.png" src="../../images/volumetric-rendering/Performance.png"><p>The main reason for the worse performance are the shadow rays. This can be seen
+in the following visualization of shadow ray complexity and the comparison to the
+performance without the shadow rays.</p>
+<img alt="/images/volumetric-rendering/ShadowRayComplexity.png" src="../../images/volumetric-rendering/ShadowRayComplexity.png">
+</div>
+<div class="section" id="particle-performance">
+<h2>Particle performance</h2>
+<p>One of the advantages of this approach is, that the adaptive grid can be used for
+different effects and offers a unified rendering approach. As can be seen from
+the following diagram large numbers of particles can be inserted into the grid.
+One advantage of this is also, that the update of the grid depends on the actual grid
+topology and not directly on the number of particles. This makes very dense particle
+systems possible.</p>
+<img alt="/images/volumetric-rendering/ParticlePerformance.png" src="../../images/volumetric-rendering/ParticlePerformance.png">
+</div>
+<div class="section" id="memory-usage">
+<h2>Memory usage</h2>
+<p>As an example for a scene with ground fog and a large number of particles the overall
+memory usage is around 256 MB. This is mainly influenced by the 3D volume textures
+which have a side length of 17 texels in the current implementation.
+The distribution of memory can be seen in the following table:</p>
+<img alt="/images/volumetric-rendering/Memory.png" src="../../images/volumetric-rendering/Memory.png">
+</div>
+<div class="section" id="rendering-results">
+<h2>Rendering Results</h2>
+<p>The results of the rendering were compared against the physically based offline
+raytracer from <a class="reference external" href="href=%22http:/www.pbrt.org/%22">PBRT.</a> An example for this with the exported ground fog can
+seen in the following image. On the left the results of the prototype can be seen
+and on the right the results of the offline raytracer. The raytracer was modified
+to only use single scattering similar to the prototype.</p>
+<img alt="/images/volumetric-rendering/ComparisonGroundFog_Inside.png" src="../../images/volumetric-rendering/ComparisonGroundFog_Inside.png">
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>The prototype showed several advantages in comparison to previous approaches:</p>
+<ul class="simple">
+<li>Independent frequencies: This reduces the complexity of grid updates and allows to update data on different frequencies independently.</li>
+<li>World space adaptive grid: Store data over multiple frames and allows casting of shadow rays in world space. However the grid traversal is more expensive than with uniform grids.</li>
+<li>Physically correct: Because of the world space grid we have support for calculation of volumetric shadows from directional light sources. This also improves the overall rendering making it possible to achieve similar results to offline raytracers.</li>
+<li>Large numbers of particles: The adaptive grid supports dens particle systems with high frequency data.</li>
+</ul>
+<p>The main problem for the prototype of this approach is currently the performance.
+Because a far higher resolution is used in comparison to other approaches with
+all features enabled no real time performance can be achieved anymore. This is
+especially important for the costs of the shadow rays. In addition to this no
+temporal integration has been added yet which is very important to get a similar
+result from the rendering as other state of the art approaches.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources</h2>
+<p>My thesis can be downloaded from <a class="reference external" href="href=%22https:/drive.google.com/file/d/0B5BuNNa7zAi3RllYa256c1FsRU0/view?usp=sharing%22">here.</a></p>
+<p>The source code for the demo can be found on <a class="reference external" href="href=%22https:/github.com/DaSutt/VolumetricParticles">github.</a>
+It was written using Vulkan with C++ and has only been tested to be working on AMD hardware.</p>
+</div>
 </div>
     </div>
     
