@@ -10,7 +10,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="http://dasutt.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/more-screenshots/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/volumetric-particles-part-1-adaptive-grid/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -63,7 +63,170 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/more-screenshots/" class="u-url">More screenshots</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/volumetric-particles-part-1-adaptive-grid/" class="u-url">Volumetric Particles Part 1 - Adaptive Grid</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Daniel Suttor
+            </span></p>
+            <p class="dateline"><a href="posts/volumetric-particles-part-1-adaptive-grid/" rel="bookmark"><time class="published dt-published" datetime="2017-07-19T07:44:21+02:00" title="2017-07-19 07:44">2017-07-19 07:44</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>This is the first part of a series of blog posts covering the details of my master's
+thesis. An overview of this project can be found <a class="reference external" href="stories/volumetric-rendering">here.</a>
+The source code is available on <a class="reference external" href="https://github.com/DaSutt/VolumetricParticles">github.</a></p>
+<p>In this post I am going to cover the data structure that is created on the CPU
+and used during raymarching on the GPU to calculate the volumetric effects. I am
+using a simple example scene for this. The subdivision of the grid can be seen in the
+following screenshot:</p>
+<img alt="/images/volumetric-particles/GridSubdivision.png" src="images/volumetric-particles/GridSubdivision.png"><p>It consists of the root node in the background, two nodes on the medium level and
+four nodes on the highest resolution. The subdivision factor on each level is 16.
+This creates a similar tree to <a class="reference external" href="https://developer.nvidia.com/gvdb">GVDB.</a></p>
+<div class="section" id="node-data">
+<h2>Node Data</h2>
+<p>The following buffers contain the data needed on the GPU for the adaptive grid:</p>
+<ul class="simple">
+<li>NodeInfo - image and child offsets</li>
+<li>ActiveBits - bits to indicate which child nodes are active</li>
+<li>NodeCount - store the number of active nodes</li>
+<li>ChildIndices - index into the NodeInfo array for each child</li>
+</ul>
+<p>Each node stores the 3D image offset into a 3D texture atlas which contains the
+actual volumetric data. This image offset is packed into a 32bit unsigned integer
+value. In addition to this an additional offset for mipmaps is stored. Each node
+also stores the start offset into the child indices array.</p>
+<p>For the current subdivision factor of 16 it is necessary to store 16^3 bits for
+all possible active children based on their positions inside of the parent node.
+For each node 128 32bit unsigned integer values are
+reserved inside the active bits array to store the child information. In addition
+in the node count array the number bits are stored which have been set until this
+position in the array.</p>
+<p>The find the index into the node info array for an active child bit counting is used.
+To achieve this the node indices are stored inside the child indices array. Because
+they are ordered based on the 1D index of the bits it is possible to find the
+correct position in the child indices array from the active bits.</p>
+</div>
+<div class="section" id="example">
+<h2>Example</h2>
+<p>Using the same subdivision of the grid as in the example above the following data
+on the different levels is stored:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%">
+<col width="14%">
+<col width="17%">
+<col width="11%">
+<col width="15%">
+<col width="13%">
+<col width="16%">
+</colgroup>
+<thead valign="bottom"><tr>
+<th class="head">Node Index</th>
+<th class="head">Grid Level</th>
+<th class="head">Node Position</th>
+<th class="head">1D index</th>
+<th class="head">Array Index</th>
+<th class="head">Bit Index</th>
+<th class="head">Child Offset</th>
+</tr></thead>
+<tbody valign="top">
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0,0,0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>7,7,8</td>
+<td>2167</td>
+<td>67</td>
+<td>23</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>8,7,8</td>
+<td>2168</td>
+<td>67</td>
+<td>24</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>15,15,6</td>
+<td>1791</td>
+<td>55</td>
+<td>31</td>
+<td> </td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>15,15,7</td>
+<td>2047</td>
+<td>63</td>
+<td>31</td>
+<td> </td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>0,15,6</td>
+<td>1776</td>
+<td>55</td>
+<td>16</td>
+<td> </td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>0,15,7</td>
+<td>2032</td>
+<td>63</td>
+<td>16</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%">
+<col width="9%">
+<col width="9%">
+<col width="9%">
+<col width="9%">
+<col width="9%">
+<col width="9%">
+</colgroup>
+<tbody valign="top"><tr>
+<td>Child Indices</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr></tbody>
+</table>
+<p>The following calculations are performed:</p>
+<ul class="simple">
+<li>1D index = (pos.z * resolution + pos.y) * resolution + pos.x</li>
+<li>Array Index = 1D index / 32</li>
+<li>Bit Index = 1D index % 32</li>
+</ul>
+<p>How this data is used on the GPU to traverse the grid is described in the next
+blog post.</p>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/more-screenshots/" class="u-url">More screenshots</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Daniel Suttor

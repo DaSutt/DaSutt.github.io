@@ -1,5 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daniel Suttor</title><link>http://dasutt.github.io/</link><description>This is the personal website of Daniel Suttor.</description><atom:link href="http://dasutt.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 21 May 2017 10:09:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More screenshots</title><link>http://dasutt.github.io/posts/more-screenshots/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added some screenshots of the volumetric rendering I am currently working on for my master thesis
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daniel Suttor</title><link>http://dasutt.github.io/</link><description>This is the personal website of Daniel Suttor.</description><atom:link href="http://dasutt.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 19 Jul 2017 09:00:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Volumetric Particles Part 1 - Adaptive Grid</title><link>http://dasutt.github.io/posts/volumetric-particles-part-1-adaptive-grid/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;This is the first part of a series of blog posts covering the details of my master's
+thesis. An overview of this project can be found &lt;a class="reference external" href="http://dasutt.github.io/stories/volumetric-rendering"&gt;here.&lt;/a&gt;
+The source code is available on &lt;a class="reference external" href="https://github.com/DaSutt/VolumetricParticles"&gt;github.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this post I am going to cover the data structure that is created on the CPU
+and used during raymarching on the GPU to calculate the volumetric effects. I am
+using a simple example scene for this. The subdivision of the grid can be seen in the
+following screenshot:&lt;/p&gt;
+&lt;img alt="/images/volumetric-particles/GridSubdivision.png" src="http://dasutt.github.io/images/volumetric-particles/GridSubdivision.png"&gt;
+&lt;p&gt;It consists of the root node in the background, two nodes on the medium level and
+four nodes on the highest resolution. The subdivision factor on each level is 16.
+This creates a similar tree to &lt;a class="reference external" href="https://developer.nvidia.com/gvdb"&gt;GVDB.&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="node-data"&gt;
+&lt;h2&gt;Node Data&lt;/h2&gt;
+&lt;p&gt;The following buffers contain the data needed on the GPU for the adaptive grid:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;NodeInfo - image and child offsets&lt;/li&gt;
+&lt;li&gt;ActiveBits - bits to indicate which child nodes are active&lt;/li&gt;
+&lt;li&gt;NodeCount - store the number of active nodes&lt;/li&gt;
+&lt;li&gt;ChildIndices - index into the NodeInfo array for each child&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each node stores the 3D image offset into a 3D texture atlas which contains the
+actual volumetric data. This image offset is packed into a 32bit unsigned integer
+value. In addition to this an additional offset for mipmaps is stored. Each node
+also stores the start offset into the child indices array.&lt;/p&gt;
+&lt;p&gt;For the current subdivision factor of 16 it is necessary to store 16^3 bits for
+all possible active children based on their positions inside of the parent node.
+For each node 128 32bit unsigned integer values are
+reserved inside the active bits array to store the child information. In addition
+in the node count array the number bits are stored which have been set until this
+position in the array.&lt;/p&gt;
+&lt;p&gt;The find the index into the node info array for an active child bit counting is used.
+To achieve this the node indices are stored inside the child indices array. Because
+they are ordered based on the 1D index of the bits it is possible to find the
+correct position in the child indices array from the active bits.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="example"&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;p&gt;Using the same subdivision of the grid as in the example above the following data
+on the different levels is stored:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="14%"&gt;
+&lt;col width="14%"&gt;
+&lt;col width="17%"&gt;
+&lt;col width="11%"&gt;
+&lt;col width="15%"&gt;
+&lt;col width="13%"&gt;
+&lt;col width="16%"&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Node Index&lt;/th&gt;
+&lt;th class="head"&gt;Grid Level&lt;/th&gt;
+&lt;th class="head"&gt;Node Position&lt;/th&gt;
+&lt;th class="head"&gt;1D index&lt;/th&gt;
+&lt;th class="head"&gt;Array Index&lt;/th&gt;
+&lt;th class="head"&gt;Bit Index&lt;/th&gt;
+&lt;th class="head"&gt;Child Offset&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0,0,0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;7,7,8&lt;/td&gt;
+&lt;td&gt;2167&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;8,7,8&lt;/td&gt;
+&lt;td&gt;2168&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;15,15,6&lt;/td&gt;
+&lt;td&gt;1791&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;15,15,7&lt;/td&gt;
+&lt;td&gt;2047&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0,15,6&lt;/td&gt;
+&lt;td&gt;1776&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0,15,7&lt;/td&gt;
+&lt;td&gt;2032&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="45%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Child Indices&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The following calculations are performed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;1D index = (pos.z * resolution + pos.y) * resolution + pos.x&lt;/li&gt;
+&lt;li&gt;Array Index = 1D index / 32&lt;/li&gt;
+&lt;li&gt;Bit Index = 1D index % 32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How this data is used on the GPU to traverse the grid is described in the next
+blog post.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/volumetric-particles-part-1-adaptive-grid/</guid><pubDate>Wed, 19 Jul 2017 05:44:21 GMT</pubDate></item><item><title>More screenshots</title><link>http://dasutt.github.io/posts/more-screenshots/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added some screenshots of the volumetric rendering I am currently working on for my master thesis
 &lt;a class="reference external" href="http://dasutt.github.io/stories/volumetric-rendering"&gt;here&lt;/a&gt; .&lt;/p&gt;
 &lt;p&gt;I also added some reviews to a tool I wrote for AMD &lt;a class="reference external" href="http://dasutt.github.io/stories/open-capture-and-analytics-tool"&gt;OCAT&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;More information on both projects is to come after I finished writing my thesis.&lt;/p&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/more-screenshots/</guid><pubDate>Sun, 21 May 2017 10:07:29 GMT</pubDate></item><item><title>Ifc to Unreal</title><link>http://dasutt.github.io/posts/ifc-to-unreal-post/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;p&gt;I wrote an article about a project to import architectural Ifc data into Unreal Engine.

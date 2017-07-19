@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>http://dasutt.github.io/archive.html</loc>
-  <lastmod>2017-05-21T10:09:00Z</lastmod>
+  <lastmod>2017-07-19T05:49:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/</loc>
@@ -76,6 +76,10 @@
  <url>
   <loc>http://dasutt.github.io/posts/more-screenshots/</loc>
   <lastmod>2017-05-21T10:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/posts/volumetric-particles-part-1-adaptive-grid/</loc>
+  <lastmod>2017-07-19T05:49:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/welcome/</loc>
