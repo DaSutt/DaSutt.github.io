@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Daniel Suttor (Posts about posts)</title><link>http://dasutt.github.io/</link><description></description><atom:link href="http://dasutt.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Thu, 10 Jan 2019 15:15:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Starting in game development</title><link>http://dasutt.github.io/posts/starting-in-game-development/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I recently held a presentation about my work at Frostbite at my old university.
+The first part was about the cool stuff I get to work on at Frostbite. In the
+second part of the presentation I talked more about my experience going through the
+interview process. Since this can be quite intimidating and stressful I wanted
+to give the students who would be in the same situation as me an overview of
+what had worked for me and what could I have done better.&lt;/p&gt;
+&lt;p&gt;Since I always prefer a written down version myself rather than just the presentation
+here are some thoughts on this. For each part I will talk about what worked for
+me and what I could have done better in hindsight.&lt;/p&gt;
+&lt;div class="section" id="before-applying"&gt;
+&lt;h2&gt;Before applying&lt;/h2&gt;
+&lt;p&gt;The most important thing when coming straight from university is to show that you
+have some practical experience in programming.&lt;/p&gt;
+&lt;div class="section" id="what-i-did"&gt;
+&lt;h3&gt;What I did:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Writing a blog&lt;/strong&gt; is a good way to highlight your interests. It is also great to see the development of a project that way. Also your blog can be used to show your projects.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hobby projects&lt;/strong&gt; are great because it shows that you are actively work on broadening your knowledge besides what you have been doing in university. It is also very good to learn a lot. Obviously if you do it on your own it can get a bit frustrating if you are not making as much progress as you want. Because of this try not to create too large projects from the beginning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;University projects:&lt;/strong&gt; This is straightforward, you are already spending time on these projects. Especially if these projects are more open ended it is a great opportunity to create something interesting. One thing which you should keep in mind is to highlight what things you have been working on. These projects are also a great way to show that you can manage to work together with other people.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open source:&lt;/strong&gt; With GitHub or bitbucket you can have unlimited repositories so use that. It becomes a lot easier to maintain these and if you make them public even better. The quality of the code is not necessarily a big issue, I personally find it more interesting to see if someone finishes projects and continues to grow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-i-could-have-done-better"&gt;
+&lt;h3&gt;What I could have done better:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Maintaining a website from the beginning&lt;/strong&gt; I only started like a year before I finished my studies. Going through my old projects and remembering what I did became a lot harder to do.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use source control&lt;/strong&gt; This would have made it a lot easier to maintain all my projects. So start using it as early as possible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advertise myself&lt;/strong&gt; - I am not a big fan of social media so I was never really interested in doing this. But it can definitely be very helpful to get in contact with people.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Focus more on practical experience&lt;/strong&gt; In the beginning a lot of the courses in university would be a written exam which would determine your grade and then a practical exercise giving you a small bonus on the exam results. Looking back I should have focused more on the exercises. In general do as much practical work as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="useful-resources"&gt;
+&lt;h3&gt;Useful resources&lt;/h3&gt;
+&lt;p&gt;When I was working on starting my online presence I was delving a bit in website development. However I was not a big fan of this and I felt this was taking time away from what I actually wanted to achieve.
+Thankfully Matthäus suggested to use a static website generator instead &lt;a class="reference external" href="https://anteru.net/blog/2016/moving-from-wordpress-to-nikola/index.html"&gt;Link&lt;/a&gt; . I have been using &lt;a class="reference external" href="https://getnikola.com/"&gt;nikola&lt;/a&gt; since then and I am pretty happy with it. I am also hosting the blog on &lt;a class="reference external" href="https://pages.github.com/"&gt;github pages&lt;/a&gt; which is super easy and free.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="application"&gt;
+&lt;h2&gt;Application&lt;/h2&gt;
+&lt;p&gt;After you have made sure you have some online presence and some practical examples
+you now have to decide for which jobs you want to apply.&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h3&gt;What I did:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Looking for specific job offerings:&lt;/strong&gt; I already knew that I wanted to work in computer graphics and in the games industry so I focused mainly on jobs as a rendering engineer. I specifically looked for AAA game dev companies as well as game engine companies.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Be open for working abroad&lt;/strong&gt; With these goals in mind I soon realized it will not really be possible to achieve them by staying in Germany. So I focused instead on the job and not on the location. As an example I was considering jobs in Sweden, England, Poland, Canada and Germany.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gather information about the company&lt;/strong&gt; When preparing my applications I found glassdoor quite useful. Especially in the games industry you might be able to see some red flags before hand. But it is also a good tool to get information how their interview process might work.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CV&lt;/strong&gt; Not sure how good my CV really was. What I focused on was to emphasize my practical experience and the projects I worked on. Also don't try to fill it up with useless information.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Get in contact&lt;/strong&gt; I was quite fortunate to be supervised by Matthäus from AMD during my masters thesis. Thanks to him we got in contact to Sebastien Hillaire from Frostbite which supervised the thesis as well. Already having this contact helped a lot to make the application process as painless as possible.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h3&gt;What I could have done better:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Get in contact&lt;/strong&gt; I cannot stress enough how important this is. For most of the applications I did send out I only got automated messages back and never heard from them. This was quite discouraging and could have been prevented by getting in contact directly with the developers. So try and get in contact directly with the developers if possible. One of the best resources for this is twitter. Don't be afraid to ask questions or contact people. From my experience all the people I am now working with are always willing to help.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Work during your studies&lt;/strong&gt; Obviously even better for your application is if you already have some experience working at a company. Even if you do a lot of programming on your own, being in a professional environment is far different. In hindsight I should have done this but I must admit that I was too lazy to look for a job.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interview-process"&gt;
+&lt;h2&gt;Interview process&lt;/h2&gt;
+&lt;p&gt;In my opinion this is the hardest part to prepare for because it is hard to know what
+to expect. I also did not have a lot of different interviews. This was simply because
+I did not get invited to a lot of them and never heard back after I did send my applications out. So make sure to get in contact with someone to make sure you get invited to interviews.&lt;/p&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;What I did:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Revisit theory I tend to forget quite a lot of things when I don't use them very much. So I prepared for the interviews by revisiting a lot of theory. I have added some of the books I found helpful under &lt;em&gt;Additional resources&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go through old projects&lt;/strong&gt; Since I tried to highlight those as much as possible I wanted to be prepared to talk about them. I looked through them and thought about what I found challenging and what I had learned from them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Research about company&lt;/strong&gt; Obviously I already did that when I looked for companies to apply to. However for the positions I actually interviewed for I made sure to be up to date with the company.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h3&gt;What I could have done better:&lt;/h3&gt;
+&lt;p&gt;I am not really sure what I could have improved since you usually don't get much
+feedback after the interviews. I guess I could have looked into identifying some
+of my weak points in regards to the job requirements and try to improve there.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h3&gt;Interview Process&lt;/h3&gt;
+&lt;p&gt;This is an overview of the process I went through during my interviews.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;First Interview&lt;/strong&gt; this was less technical and more about the team getting to know me, what I had worked on and what I was interested in. It was also about describing what my job responsibilities would be.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Practical exercise&lt;/strong&gt; After that interview I got sent a practical exercise which I had a certain time to solve and send back to them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Second Interview&lt;/strong&gt; this was an actual technical interview. It covered a very broad range of topics and it was quite difficult to go through all those context switches.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Onsite Interview&lt;/strong&gt; Finally I was invited to an all day onsite interview. This was actually made up of multiple interviews with different members of the team. It also included a longer technical interview which did go more into detail than the second phone interview. In general this was to meet as much people from the team as possible so that they can get a feeling for the new person.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="additional-resources"&gt;
+&lt;h2&gt;Additional resources&lt;/h2&gt;
+&lt;p&gt;Some of the books I used while preparing for the technical interviews:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Cracking the coding interview&lt;/strong&gt; is a good overview of general comupter science topics. In hindsight this did not really reflect the kind of questions I was asked but it still is a nice structured book.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Game Engine Architecture&lt;/strong&gt; a great book giving you a broad overview of game dev tech and engine development.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Real Time Rendering&lt;/strong&gt; also great book giving you an overview of computer graphics techniques.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some additional links that might be useful and contain additional information:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.gamasutra.com/view/news/112374/Opinion_Game_Industry_Interviewing_101.php"&gt;https://www.gamasutra.com/view/news/112374/Opinion_Game_Industry_Interviewing_101.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://aras-p.info/texts/files/2018Academy%20-%20Interviewing.pdf"&gt;https://aras-p.info/texts/files/2018Academy%20-%20Interviewing.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://aras-p.info/blog/2016/11/05/Interview-questions/"&gt;https://aras-p.info/blog/2016/11/05/Interview-questions/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/starting-in-game-development/</guid><pubDate>Thu, 10 Jan 2019 14:15:25 GMT</pubDate></item><item><title>Volumetric Particles Part 1 - Adaptive Grid</title><link>http://dasutt.github.io/posts/volumetric-particles-part-1-adaptive-grid/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;This is the first part of a series of blog posts covering the details of my master's
+thesis. An overview of this project can be found &lt;a class="reference external" href="http://dasutt.github.io/stories/volumetric-rendering/"&gt;here.&lt;/a&gt;
+The source code is available on &lt;a class="reference external" href="https://github.com/DaSutt/VolumetricParticles"&gt;github.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this post I am going to cover the data structure that is created on the CPU
+and used during raymarching on the GPU to calculate the volumetric effects. I am
+using a simple example scene for this. The subdivision of the grid can be seen in the
+following screenshot:&lt;/p&gt;
+&lt;img alt="/images/volumetric-particles/GridSubdivision.png" src="http://dasutt.github.io/images/volumetric-particles/GridSubdivision.png"&gt;
+&lt;p&gt;It consists of the root node in the background, two nodes on the medium level and
+four nodes on the highest resolution. The subdivision factor on each level is 16.
+This creates a similar tree to &lt;a class="reference external" href="https://developer.nvidia.com/gvdb"&gt;GVDB.&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="node-data"&gt;
+&lt;h2&gt;Node Data&lt;/h2&gt;
+&lt;p&gt;The following buffers contain the data needed on the GPU for the adaptive grid:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;NodeInfo - image and child offsets&lt;/li&gt;
+&lt;li&gt;ActiveBits - bits to indicate which child nodes are active&lt;/li&gt;
+&lt;li&gt;NodeCount - store the number of active nodes&lt;/li&gt;
+&lt;li&gt;ChildIndices - index into the NodeInfo array for each child&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each node stores the 3D image offset into a 3D texture atlas which contains the
+actual volumetric data. This image offset is packed into a 32bit unsigned integer
+value. In addition to this an additional offset for mipmaps is stored. Each node
+also stores the start offset into the child indices array.&lt;/p&gt;
+&lt;p&gt;For the current subdivision factor of 16 it is necessary to store 16^3 bits for
+all possible active children based on their positions inside of the parent node.
+For each node 128 32bit unsigned integer values are
+reserved inside the active bits array to store the child information. In addition
+in the node count array the number bits are stored which have been set until this
+position in the array.&lt;/p&gt;
+&lt;p&gt;The find the index into the node info array for an active child bit counting is used.
+To achieve this the node indices are stored inside the child indices array. Because
+they are ordered based on the 1D index of the bits it is possible to find the
+correct position in the child indices array from the active bits.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="example"&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;p&gt;Using the same subdivision of the grid as in the example above the following data
+on the different levels is stored:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="14%"&gt;
+&lt;col width="14%"&gt;
+&lt;col width="17%"&gt;
+&lt;col width="11%"&gt;
+&lt;col width="15%"&gt;
+&lt;col width="13%"&gt;
+&lt;col width="16%"&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;Node Index&lt;/th&gt;
+&lt;th class="head"&gt;Grid Level&lt;/th&gt;
+&lt;th class="head"&gt;Node Position&lt;/th&gt;
+&lt;th class="head"&gt;1D index&lt;/th&gt;
+&lt;th class="head"&gt;Array Index&lt;/th&gt;
+&lt;th class="head"&gt;Bit Index&lt;/th&gt;
+&lt;th class="head"&gt;Child Offset&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0,0,0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;7,7,8&lt;/td&gt;
+&lt;td&gt;2167&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;8,7,8&lt;/td&gt;
+&lt;td&gt;2168&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;15,15,6&lt;/td&gt;
+&lt;td&gt;1791&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;15,15,7&lt;/td&gt;
+&lt;td&gt;2047&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0,15,6&lt;/td&gt;
+&lt;td&gt;1776&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0,15,7&lt;/td&gt;
+&lt;td&gt;2032&lt;/td&gt;
+&lt;td&gt;63&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt; &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="45%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;col width="9%"&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Child Indices&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The following calculations are performed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;1D index = (pos.z * resolution + pos.y) * resolution + pos.x&lt;/li&gt;
+&lt;li&gt;Array Index = 1D index / 32&lt;/li&gt;
+&lt;li&gt;Bit Index = 1D index % 32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How this data is used on the GPU to traverse the grid is described in the next
+blog post.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/volumetric-particles-part-1-adaptive-grid/</guid><pubDate>Wed, 19 Jul 2017 05:44:21 GMT</pubDate></item><item><title>More screenshots</title><link>http://dasutt.github.io/posts/more-screenshots/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added some screenshots of the volumetric rendering I am currently working on for my master thesis
+&lt;a class="reference external" href="http://dasutt.github.io/stories/volumetric-rendering/"&gt;here&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;I also added some reviews to a tool I wrote for AMD &lt;a class="reference external" href="http://dasutt.github.io/stories/open-capture-and-analytics-tool/"&gt;OCAT&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More information on both projects is to come after I finished writing my thesis.&lt;/p&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/more-screenshots/</guid><pubDate>Sun, 21 May 2017 10:07:29 GMT</pubDate></item><item><title>Ifc to Unreal</title><link>http://dasutt.github.io/posts/ifc-to-unreal-post/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;p&gt;I wrote an article about a project to import architectural Ifc data into Unreal Engine.
+We managed to import the complete mathematics - informatics building of our university.
+More information about the import process and the different issues we faced can be found
+&lt;a class="reference external" href="http://dasutt.github.io/stories/ifc-to-unreal/"&gt;here&lt;/a&gt; .&lt;/p&gt;</description><category>Blender</category><category>C++</category><category>Unreal Engine</category><guid>http://dasutt.github.io/posts/ifc-to-unreal-post/</guid><pubDate>Sat, 15 Apr 2017 21:44:25 GMT</pubDate></item><item><title>Blender and DirectX projects</title><link>http://dasutt.github.io/posts/blender-and-directx-projects/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added two more projects I did some time ago:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Sandbox:&lt;/strong&gt; C++/DirectX application to test out different graphic effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ice base:&lt;/strong&gt; A 3D model I created from scratch&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>Blender</category><category>C++</category><category>DirectX 11</category><guid>http://dasutt.github.io/posts/blender-and-directx-projects/</guid><pubDate>Thu, 16 Jun 2016 14:46:15 GMT</pubDate></item><item><title>First project pages</title><link>http://dasutt.github.io/posts/first-project-pages/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I added some of my projects to the project page:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Interactive Visual Data Analysis:&lt;/strong&gt; C++/DirectX tool for rendering of scientific volume data sets.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VR Exploration:&lt;/strong&gt; The results of my bachelor's thesis. A framework for Oculus Rift and Leap Motion for VR movement of data sets.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Into Darkness:&lt;/strong&gt; Detailed information on what I worked on during the Into Darkness project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I also added some information on other projects. However for those I have not
+yet wrote a complete article. More will come later.&lt;/p&gt;&lt;/div&gt;</description><category>C++</category><category>DirectX 11</category><category>Leap Motion</category><category>Oculus Rift</category><guid>http://dasutt.github.io/posts/first-project-pages/</guid><pubDate>Fri, 27 May 2016 13:56:12 GMT</pubDate></item><item><title>Into Darkness Postmortem</title><link>http://dasutt.github.io/posts/into-darkness-postmortem/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Into Darkness is a top down isometric shooter game I developed with four other
+students in a practical course during one semester at TUM. We decided to write
+the whole game from scratch using C++ and DirectX. This proved to be quite a different
+experience than other projects I did before. I will add more information on the
+project page in the next time. In this post I want to give an overview of my experiences
+during this project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-positive"&gt;
+&lt;h2&gt;The Positive&lt;/h2&gt;
+&lt;p&gt;I really liked the setting of our game. Our vision was to create a game where the
+player would explore abandoned underground places and try to gather needed resources.
+The idea was to increase the danger in form of aliens attacking the player while going
+deeper underground. In the same way the player would find more resources in lower levels.
+We wanted that light would play an important role both as an atmospheric element
+and as a game mechanic to be used against the underground dwelling aliens. Overall
+I think that could have created a quite interesting game experience.&lt;/p&gt;
+&lt;p&gt;The best thing of the whole project was to develop the whole game from scratch.
+While it was a lot of work it was also a great experience and a lot of fun to
+see the game grow continually from nothing. For it was far more rewarding to get a
+feature running properly than just using a pre made game engine like Unity.
+Even though the progress is obviously a lot slower compared to using an engine you
+can really understand what is running under the hood of the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-challenges"&gt;
+&lt;h2&gt;The Challenges&lt;/h2&gt;
+&lt;div class="section" id="concept-phase"&gt;
+&lt;h3&gt;Concept Phase&lt;/h3&gt;
+&lt;p&gt;While the initial concept definitely was interesting we made the mistake to not
+concentrate on one specific feature but had a really broad set of features we wanted
+to create. This especially proved a problem later in the development because we
+had to divide our time between them instead of focusing on one at a time.
+The general design was too ambitious to be achieved in the time we had.&lt;/p&gt;
+&lt;p&gt;During the course we had to create a physical prototype before starting with the
+development. While I can understand why one could use this to test an initial prototype
+it is not usable during later development in my opinion. The game play can not
+really transferred to the paper prototype. It would have been more useful to use an engine
+to create small game play prototype during the development.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="programming"&gt;
+&lt;h3&gt;Programming&lt;/h3&gt;
+&lt;p&gt;Because of our design we started from the start to create systems specially for this,
+making assumptions how we could improve the implementations early on. This was a
+mistake which became apparent later in development when the requirements changed.
+We had to change systems completely which would not have been such a problem if
+we had started with a more flexible, general approach.&lt;/p&gt;
+&lt;p&gt;Something we did not do during development was code review leading to quite interesting
+commits from team members. Sometimes the game would not work almost at all
+after changes made and we had to get back to previous commits.&lt;/p&gt;
+&lt;p&gt;One problem during the development was definitely the lack of experience. Especially
+the interaction between the different game components was quite hard. I would have
+preferred to have someone with industry experience to provide some guidance during the
+project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="art"&gt;
+&lt;h3&gt;Art&lt;/h3&gt;
+&lt;p&gt;A problem we had with most of our student game projects was the lack of artists.
+If only programmers are on your team it will definitely show in the resulting assets.
+For the project I did most of the modeling and texturing myself. Looking back at
+the results which are more like placeholders than real art I think the realistic
+art style was not the right decision. Some more abstract rendering would have helped
+to make the game look more finished in my opinion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="team-management"&gt;
+&lt;h3&gt;Team management&lt;/h3&gt;
+&lt;p&gt;Because most of the initial design was my idea and I also had done some of the basic
+engine programming already I was really interested in getting stuff done for the game.
+Due to this I tried to do as much as possible myself leading to a bad task
+distribution overall.&lt;/p&gt;
+&lt;p&gt;Task distribution in general proved to be quite some problem. There was a
+difference in experience between the different team members which made it harder
+to get important features done on time and with the correct quality. Communication
+is really important to find out if a given task can be solved by the assigned
+team member. We also had a new team member joining us almost at the end of the project.
+Without much documentation it was quite hard for him to join the development.&lt;/p&gt;
+&lt;p&gt;Another aspect of team management which did not always work was team motivation.
+As with most other university projects some people see it more as an easy way
+to get credits instead of working on the game. Fortunately, most of us were motivated
+in the beginning. However, with the increasing complexity and more and more time constraints
+in the end, this became a problem. To prevent this communication again is really
+helpful. Not addressing problems like this right away can damage the relationship
+between the team members really fast.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;By only looking of the final game I would say the project was not really successful.
+This has different reasons: First the presentation of the final game is not polished
+enough. The graphic and art style still look more like placeholders and most of the
+menu and HUD are also placeholders. Second, the actual gameplay is not really fun
+and has no really motivation for the player.&lt;/p&gt;
+&lt;p&gt;However, the overall project was a great learning experience for me. The challenges
+I had to face would not have been present like this if we had created the
+game using an existing game engine. Some of the things I would do differently next time
+are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;focus the design on one game element and test it&lt;/li&gt;
+&lt;li&gt;use an engine for prototyping&lt;/li&gt;
+&lt;li&gt;check if your game is actually fun to play&lt;/li&gt;
+&lt;li&gt;let others test your game&lt;/li&gt;
+&lt;li&gt;don't focus to early on optimizations&lt;/li&gt;
+&lt;li&gt;Instead implement more flexible, general systems&lt;/li&gt;
+&lt;li&gt;more communication between team members&lt;/li&gt;
+&lt;li&gt;improve task distribution and don't try to do everything yourself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>Blender</category><category>C++</category><category>DirectX 11</category><guid>http://dasutt.github.io/posts/into-darkness-postmortem/</guid><pubDate>Fri, 20 May 2016 13:23:46 GMT</pubDate></item><item><title>Welcome</title><link>http://dasutt.github.io/posts/welcome/</link><dc:creator>Daniel Suttor</dc:creator><description>&lt;div&gt;&lt;p&gt;I decided to start blogging about some of the projects that I am currently working
+on and have been working on in the last years.&lt;/p&gt;
+&lt;p&gt;I will be focusing mostly on real time rendering and virtual reality and game
+development. Currently I am planning to remove the dust from some of my projects
+and making them presentable.&lt;/p&gt;&lt;/div&gt;</description><guid>http://dasutt.github.io/posts/welcome/</guid><pubDate>Wed, 11 May 2016 20:21:10 GMT</pubDate></item></channel></rss>

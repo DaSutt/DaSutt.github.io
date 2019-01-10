@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="http://dasutt.github.io/posts/more-screenshots/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Daniel Suttor">
 <link rel="prev" href="../ifc-to-unreal-post/" title="Ifc to Unreal" type="text/html">
@@ -76,7 +76,10 @@ More information on both projects i">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                     Daniel Suttor
             </span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-05-21T12:07:29+02:00" itemprop="datePublished" title="2017-05-21 12:07">2017-05-21 12:07</time></a></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2017-05-21T12:07:29+02:00" itemprop="datePublished" title="2017-05-21 12:07">2017-05-21 12:07</time></a>
+            </p>
             
 
         </div>
@@ -85,8 +88,8 @@ More information on both projects i">
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>I added some screenshots of the volumetric rendering I am currently working on for my master thesis
-<a class="reference external" href="../../stories/volumetric-rendering">here</a> .</p>
-<p>I also added some reviews to a tool I wrote for AMD <a class="reference external" href="../../stories/open-capture-and-analytics-tool">OCAT</a>.</p>
+<a class="reference external" href="../../stories/volumetric-rendering/">here</a> .</p>
+<p>I also added some reviews to a tool I wrote for AMD <a class="reference external" href="../../stories/open-capture-and-analytics-tool/">OCAT</a>.</p>
 <p>More information on both projects is to come after I finished writing my thesis.</p>
 </div>
     </div>
@@ -102,16 +105,22 @@ More information on both projects i">
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2017         <a href="mailto:mail@danielsuttor.de">Daniel Suttor</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:mail@danielsuttor.de">Daniel Suttor</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>

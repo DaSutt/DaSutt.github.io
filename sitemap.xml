@@ -7,142 +7,146 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://dasutt.github.io/</loc>
-  <lastmod>2017-04-15T21:47:00Z</lastmod>
+  <lastmod>2019-01-10T14:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/2016/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/2017/</loc>
-  <lastmod>2017-04-15T21:47:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/2019/</loc>
+  <lastmod>2019-01-10T14:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/archive.html</loc>
-  <lastmod>2017-07-19T05:49:00Z</lastmod>
+  <lastmod>2019-01-10T14:34:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/</loc>
-  <lastmod>2017-04-23T11:55:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/blender/</loc>
-  <lastmod>2017-04-23T11:42:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/c%2B%2B/</loc>
-  <lastmod>2017-04-23T11:55:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/categories/cat_posts/</loc>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/directx-11/</loc>
-  <lastmod>2017-04-23T11:55:00Z</lastmod>
- </url>
- <url>
-  <loc>http://dasutt.github.io/categories/directx/</loc>
-  <lastmod>2017-04-23T11:42:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/leap-motion/</loc>
-  <lastmod>2017-04-23T11:55:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/oculus-rift/</loc>
-  <lastmod>2017-04-23T11:55:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/categories/unreal-engine/</loc>
-  <lastmod>2017-04-23T11:55:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/blender-and-directx-projects/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/first-project-pages/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/ifc-to-unreal-post/</loc>
-  <lastmod>2017-04-15T21:48:00Z</lastmod>
- </url>
- <url>
-  <loc>http://dasutt.github.io/posts/ifc-to-unreal/</loc>
-  <lastmod>2017-04-15T21:47:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/into-darkness-postmortem/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/more-screenshots/</loc>
-  <lastmod>2017-05-21T10:09:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://dasutt.github.io/posts/starting-in-game-development/</loc>
+  <lastmod>2019-01-10T14:20:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/volumetric-particles-part-1-adaptive-grid/</loc>
-  <lastmod>2017-07-19T05:49:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/posts/welcome/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/blob/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/celestial/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/flappy-owl/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/ice-base/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/ifc-to-unreal/</loc>
-  <lastmod>2017-04-15T20:38:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/impressum/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/interactive-visual-data-analysis/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/interactive-visualization/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/into-darkness/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/open-capture-and-analytics-tool/</loc>
-  <lastmod>2017-04-23T11:24:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/projects/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/sandbox/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/tiled-forward-plus-rendering/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/volumetric-rendering/</loc>
-  <lastmod>2017-05-21T10:06:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
  <url>
   <loc>http://dasutt.github.io/stories/vr-exploration/</loc>
-  <lastmod>2017-04-15T13:07:00Z</lastmod>
+  <lastmod>2019-01-10T14:03:00Z</lastmod>
  </url>
 </urlset>

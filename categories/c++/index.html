@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +7,9 @@
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
 <link rel="canonical" href="http://dasutt.github.io/categories/c%2B%2B/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link rel="alternate" type="application/rss+xml" title="RSS for tag C++" href="../c%2B%2B.xml">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><link rel="alternate" type="application/rss+xml" title="RSS for tag C++" hreflang="en" href="../c%2B%2B.xml">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -61,36 +61,50 @@
             
 <article class="tagpage"><header><h1>Posts about C++</h1>
         <div class="metadata">
-                <p class="feedlink"><a href="../c%2B%2B.xml" type="application/rss+xml">RSS feed</a></p>
+            
+                <p class="feedlink">
+                        
+            <a href="../c%2B%2B.xml" hreflang="en" type="application/rss+xml">RSS feed</a>
+
+                </p>
+
         </div>
+        
+
     </header><ul class="postlist">
 <li>
 <time class="listdate" datetime="2017-04-15T23:44:25+02:00" title="2017-04-15 23:44">2017-04-15 23:44</time><a href="../../posts/ifc-to-unreal-post/" class="listtitle">Ifc to Unreal</a><a></a>
 </li>
-        <li>
+            <li>
 <time class="listdate" datetime="2016-06-16T16:46:15+02:00" title="2016-06-16 16:46">2016-06-16 16:46</time><a href="../../posts/blender-and-directx-projects/" class="listtitle">Blender and DirectX projects</a><a></a>
 </li>
-        <li>
+            <li>
 <time class="listdate" datetime="2016-05-27T15:56:12+02:00" title="2016-05-27 15:56">2016-05-27 15:56</time><a href="../../posts/first-project-pages/" class="listtitle">First project pages</a><a></a>
 </li>
-        <li>
+            <li>
 <time class="listdate" datetime="2016-05-20T15:23:46+02:00" title="2016-05-20 15:23">2016-05-20 15:23</time><a href="../../posts/into-darkness-postmortem/" class="listtitle">Into Darkness Postmortem</a><a></a>
 </li>
-    </ul></article>
+        </ul></article>
 </div>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2017         <a href="mailto:mail@danielsuttor.de">Daniel Suttor</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:mail@danielsuttor.de">Daniel Suttor</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
 </div>
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>
